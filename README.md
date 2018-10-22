@@ -3,19 +3,20 @@ CRUD app for WDI17 Project 2
 App listing TV shows based on comic books that are currently showing
 
 Will be using:
-- Ruby code the pages,
+- Ruby to code the pages,
 - CSS to style the pages,
 - Postgresql to create the database to hold the show information,
 - ActiveRecord
 - possibly link to OMDBapi
 
 - Each page will have the same top Title and Navigation bar
-- Navigation bar will include links to: - home, login/signup and possibly a theme switcher (which will use JS)
+- Navigation bar will include links to: - home, login/signup, email us/suggestions and possibly a theme switcher (which will use JS)
 
-Models will include a shows table, a comments table and a users table. 
-Shows table will hold id, title of show, an image_url of the show (possibly from OMDBapi)
+Models will include shows, comments and users. 
+Shows table will hold id, title of show, an image_url of the show (possibly from OMDBapi).
 Comments table will hold id, a text body and a show_id
-Users table will hold id, email, password_digest and a column checking if user is an admin or not. 
+Users table will hold id, email, password_digest and a column checking if user is an admin or not.
+Suggestions will hold id, user_id/email and a text body. 
 
 Admin users will be allowed to ADD new shows, EDIT show information and DELETE show information.
 Regular guest users will be allowed to LIKE a show and to COMMENT (and edit/delete their comment) a show
@@ -25,3 +26,4 @@ Pages:
 - show.erb will show the title and image of an individual show, will have the year and a brief show description (possibly from OMDBapi). Will have a LIKE button (with a count). The COMMENTS section will also be on this page - comments section will add users comments who will also be able to edit/delete their own comments. For admin users, there will also be a EDIT button to edit show information and also ability to delete any inappropriate comments. 
 - new.erb will only be accessible for admin users to add new shows. It will be a form asking for title, image and description of show.
 - login.erb will a form for all users to signup or login (if already signed up) with their email and create a password. 
+- a suggestion page where user can add their suggestions on what other shows they want to see on the app. Only admin will be able to remove suggestions. 
