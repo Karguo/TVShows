@@ -3,8 +3,29 @@ CREATE DATABASE shows_db;
 CREATE TABLE shows(
   id SERIAL PRIMARY KEY,
   title VARCHAR(200),
-  image_url TEXT
+  image_url TEXT,
+  body TEXT
 );
+
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(400),
+  password_digest VARCHAR(400),
+
+);
+
+CREATE TABLE comments(
+  id SERIAL PRIMARY KEY,
+  body TEXT,
+  show_id INTEGER,
+  FOREIGN KEY (show_id) REFERENCES shows (id) ON DELETE RESTRICT
+);
+
+CREATE TABLE suggestions(
+  id SERIAL PRIMARY KEY,
+  body TEXT,
+  show_id INTEGER
+)
 
 INSERT INTO shows (title, image_url) VALUES ('agents of shield', 'https://m.media-amazon.com/images/M/MV5BMTc5NzEzMzA2MF5BMl5BanBnXkFtZTgwNDkyNzgyNDM@._V1_SX300.jpg');
 

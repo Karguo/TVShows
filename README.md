@@ -1,16 +1,17 @@
-CRUD app for WDI17 Project 2
+<h1>CRUD app for WDI17 Project 2</h1>
 
-App listing TV shows based on comic books that are currently showing
+<h2>App listing TV shows based on comic books that are currently showing</h2>
 
-Will be using:
+<h3>Will be using:</h3>
 - Ruby to code the pages,
 - CSS to style the pages,
 - Postgresql to create the database to hold the show information,
 - ActiveRecord
 - possibly link to OMDBapi
 
-- Each page will have the same top Title and Navigation bar
-- Navigation bar will include links to: - home, login/signup, email us/suggestions and possibly a theme switcher (which will use JS)
+Each page will have the same top Title and Navigation bar
+
+Navigation bar will include links to: - home, login/signup, email us/suggestions and possibly a theme switcher (which will use JS)
 
 Models will include shows, comments and users. 
 Shows table will hold id, title of show, an image_url of the show (possibly from OMDBapi).
@@ -21,7 +22,7 @@ Suggestions will hold id, user_id/email and a text body.
 Admin users will be allowed to ADD new shows, EDIT show information and DELETE show information.
 Regular guest users will be allowed to LIKE a show and to COMMENT (and edit/delete their comment) a show
 
-Pages:
+<h3>Pages:</h3>
 - index.erb will list all the shows with a title and an image, clicking on it will lead to the show information page. This page will also have for the admin the ability to add a new show
 - show.erb will show the title and image of an individual show, will have the year and a brief show description (possibly from OMDBapi). Will have a LIKE button (with a count). The COMMENTS section will also be on this page - comments section will add users comments who will also be able to edit/delete their own comments. For admin users, there will also be a EDIT button to edit show information and also ability to delete any inappropriate comments. 
 - new.erb will only be accessible for admin users to add new shows. It will be a form asking for title, image and description of show.
