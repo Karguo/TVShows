@@ -1,0 +1,27 @@
+
+<img src="<%= @show['image_url'] %>" alt="">
+
+<h3>Show title: <%= @show['title'] %></h3>
+On air since: <%= @show['year'] %>
+<br>
+Show description: <%= @show['body'] %>
+<br>
+<br>
+
+<form action="/likes" method="post">
+
+  <input type="hidden" name="show_id" value="<%= @show['id'] %>">
+  <button>LIKE!</button>
+  <%= @show.likes.count %>
+
+</form>
+
+<form action="/comments" method="post">
+
+  <label for="">Comments: </label>
+  <input type="hidden" name="text" value="">
+  <textarea name="body" id="" cols="20" rows="5"></textarea>
+  <button>Post!</button>
+
+</form>
+
