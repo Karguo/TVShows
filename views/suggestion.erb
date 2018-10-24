@@ -4,12 +4,19 @@
 
 <form action="/suggestions" method="post">
 
-  <label for="">Email address: </label>
-  <input type="email" name="email">
-
-  <label for="">Enter here: </label>
-  <input type="hidden" name="text" value="">
-  <textarea name="body" id="" cols="20" rows="5"></textarea>
+  <label for="">Suggestion: </label>
+  <textarea name="body" cols="20" rows="5"></textarea>
   <button>Post!</button>
 
 </form>
+
+<% @suggestions.each do |suggestion| %>
+
+  <p><%= suggestion["body"] %></p>
+
+  <form action="/suggestions/<%= suggestion.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Be gone!</button>
+  </form>
+
+<% end %>

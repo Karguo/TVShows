@@ -35,57 +35,20 @@ get '/shows/:id' do
   erb :show
 end
 
+get '/signup' do
+  erb :signup
+end
+
+post '/signup' do
+  user = User.new
+  user.email = params[:email]
+  user.password = params[:password]
+  user.save
+  redirect to('/login')
+end
+
 get '/login' do
   erb :login
-end
-
-get '/suggestions' do
-  erb :suggestion
-end
-
-get '/new' do
-  erb :new
-end
-
-post '/shows' do
-  show = Show.new
-  show.title = params[:title]
-  show.year = params[:year]
-  show.image_url = params[:image_url]
-  show.body = params[:body]
-  show.save
-end
-
-post '/likes' do
-  redirect to('/login') unless logged_in?
-  like = Like.new
-  like.show_id = params[:show_id]
-  like.user_id = params[:user_id]
-  like.save
-  redirect to("/shows/#{params[:show_id]}")
-end
-
-post '/suggestions' do
-  redirect to('/login') unless logged_in?
-  suggestion = Suggestion.new
-  suggestion.user_id = params[:user_id]
-  suggestion.save
-  redirect to('/')
-end
-
-post '/comments' do
-  redirect to('/login') unless logged_in?
-  comment = Comment.new
-  comment.show_id = params[:show_id]
-  comment.user_id = params[:user_id]
-  comment.save
-  redirect to("/shows/#{params[:show_id]}")
-end
-
-delete '/comments/:id' do
-  comment = Comment.find(params[:id])
-  comment.destroy
-  redirect to("/shows/#{comment[:show_id]}")
 end
 
 post '/session' do
@@ -102,3 +65,71 @@ delete '/session' do
   session[:user_id] = nil
   redirect to('/login')
 end
+
+get '/suggestions' do
+  @suggestions = Suggestion.all
+  erb :suggestion
+end
+
+get '/new' do
+  erb :new
+end
+
+post '/shows' do
+  redirect to('/login') unless logged_in?
+  show = Show.new
+  show.title = params[:title]
+  show.year = params[:year]
+  show.image_url = params[:image_url]
+  show.body = params[:body]
+  show.save
+  redirect to('/')
+end
+
+delete '/shows/:id' do 
+  redirect to('/login') unless logged_in?
+  show = Show.find(params[:id])
+  show.destroy
+  redirect to('/')
+end
+
+post '/likes' do
+  redirect to('/login') unless logged_in?
+  like = Like.new
+  like.show_id = params[:show_id]
+  like.user_id = params[:user_id]
+  like.save
+  redirect to("/shows/#{params[:show_id]}")
+end
+
+post '/suggestions' do
+  redirect to('/login') unless logged_in?
+  suggestion = Suggestion.new
+  suggestion.user_id = params[:user_id]
+  suggestion.body = params[:body]
+  suggestion.save
+  redirect to('/')
+end
+
+delete '/suggestions/:id' do
+  suggestion = Suggestion.find(params[:id])
+  suggestion.destroy
+  redirect to('/suggestions')
+end
+
+post '/comments' do
+  redirect to('/login') unless logged_in?
+  comment = Comment.new
+  comment.show_id = params[:show_id]
+  comment.user_id = params[:user_id]
+  comment.body = params[:body]
+  comment.save
+  redirect to("/shows/#{params[:show_id]}")
+end
+
+delete '/comments/:id' do
+  comment = Comment.find(params[:id])
+  comment.destroy
+  redirect to("/shows/#{comment[:show_id]}")
+end
+

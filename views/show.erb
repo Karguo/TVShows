@@ -8,6 +8,11 @@ Show description: <%= @show['body'] %>
 <br>
 <br>
 
+<form action="/shows/<%= @show['id'] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Be Gone!</button>
+</form>
+
 <form action="/likes" method="post">
 
   <input type="hidden" name="show_id" value="<%= @show['id'] %>">
@@ -19,9 +24,20 @@ Show description: <%= @show['body'] %>
 <form action="/comments" method="post">
 
   <label for="">Comments: </label>
-  <input type="hidden" name="text" value="">
-  <textarea name="body" id="" cols="20" rows="5"></textarea>
+  <input type="hidden" name="show_id" value="<%= @show['id'] %>">
+  <textarea name="body" cols="20" rows="5"></textarea>
   <button>Post!</button>
 
 </form>
+
+<% @comments.each do |comment| %>
+
+  <p><%= comment["body"] %></p>
+
+  <form action="/comments/<%= comment.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Take it away!</button>
+  </form>
+
+<% end %>
 
