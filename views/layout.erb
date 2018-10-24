@@ -14,7 +14,9 @@
   <a href="/">HOME</a> 
   <a href="/login">LOGIN/SIGNUP</a> 
   <a href="/suggestions">SUGGESTIONS</a> 
+  <% if logged_in? && current_user.admin? %>
   <a href="/new">ADD SHOW</a>
+  <% end %>
   <a href="">ARCHIVE</a> 
   <a href="">THEME SWITCHER</a>
   <br>

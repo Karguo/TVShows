@@ -75,8 +75,13 @@ get '/new' do
   erb :new
 end
 
+get '/error' do
+  erb :error
+end
+
 post '/shows' do
   redirect to('/login') unless logged_in?
+  redirect to('/error') unless current_user.admin?
   show = Show.new
   show.title = params[:title]
   show.year = params[:year]
@@ -88,6 +93,7 @@ end
 
 delete '/shows/:id' do 
   redirect to('/login') unless logged_in?
+  redirect to('/error') unless current_user.admin?
   show = Show.find(params[:id])
   show.destroy
   redirect to('/')
@@ -113,13 +119,14 @@ end
 
 delete '/suggestions/:id' do
   redirect to('/login') unless logged_in?
+  redirect to('/error') unless current_user.admin?
   suggestion = Suggestion.find(params[:id])
   suggestion.destroy
   redirect to('/suggestions')
 end
 
 post '/comments' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   comment = Comment.new
   comment.show_id = params[:show_id]
   comment.user_id = params[:user_id]
@@ -130,6 +137,7 @@ end
 
 delete '/comments/:id' do
   redirect to('/login') unless logged_in?
+  redirect to('/error') unless current_user.admin?
   comment = Comment.find(params[:id])
   comment.destroy
   redirect to("/shows/#{comment[:show_id]}")

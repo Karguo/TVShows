@@ -8,16 +8,18 @@ Show description: <%= @show['body'] %>
 <br>
 <br>
 
+<% if logged_in? && current_user.admin? %>
 <form action="/shows/<%= @show['id'] %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button>Be Gone!</button>
 </form>
+<% end %>
 
 <form action="/likes" method="post">
 
   <input type="hidden" name="show_id" value="<%= @show['id'] %>">
   <button>LIKE!</button>
-  <%= @show.likes.count %>
+  (<%= @show.likes.count %>)
 
 </form>
 
