@@ -112,6 +112,7 @@ post '/suggestions' do
 end
 
 delete '/suggestions/:id' do
+  redirect to('/login') unless logged_in?
   suggestion = Suggestion.find(params[:id])
   suggestion.destroy
   redirect to('/suggestions')
@@ -128,6 +129,7 @@ post '/comments' do
 end
 
 delete '/comments/:id' do
+  redirect to('/login') unless logged_in?
   comment = Comment.find(params[:id])
   comment.destroy
   redirect to("/shows/#{comment[:show_id]}")
