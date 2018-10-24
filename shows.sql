@@ -53,11 +53,11 @@ INSERT INTO shows (title, year, image_url, body) VALUES ('legends of tomorrow', 
 
 INSERT INTO shows (title, year, image_url, body) VALUES ('lucifer', '2015', 'https://m.media-amazon.com/images/M/MV5BMjI4MTU0NzE1OF5BMl5BanBnXkFtZTgwODI3NDc0OTE@._V1_SX300.jpg', 'Lucifer Morningstar has decided he has had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.');
 
-INSERT INTO shows (title, year, image_url, body) VALUES ('riverdale', '2016', 'https://m.media-amazon.com/images/M/MV5BZmNmYzU3ZTktZGY4NC00M2QyLWI0NTItNzRjNmU4MGI2YmNkXkEyXkFqcGdeQXVyNjYzNDE4ODA@._V1_SX300.jpg', "A subversive take on Archie and his friends, exploring small town life, the darkness and weirdness bubbling beneath Riverdale's wholesome facade.");
+INSERT INTO shows (title, year, image_url, body) VALUES ('riverdale', '2016', 'https://m.media-amazon.com/images/M/MV5BZmNmYzU3ZTktZGY4NC00M2QyLWI0NTItNzRjNmU4MGI2YmNkXkEyXkFqcGdeQXVyNjYzNDE4ODA@._V1_SX300.jpg', 'A subversive take on Archie and his friends, exploring small town life, the darkness and weirdness bubbling beneath the wholesome facade of Riverdale.');
 
-INSERT INTO shows (title, year, image_url, body) VALUES ('supergirl', '2015', 'https://m.media-amazon.com/images/M/MV5BMjE0MzgxNjYzOV5BMl5BanBnXkFtZTgwMzk3NDUyNTM@._V1_SX300.jpg', "The adventures of Superman's cousin in her own superhero career.");
+INSERT INTO shows (title, year, image_url, body) VALUES ('supergirl', '2015', 'https://m.media-amazon.com/images/M/MV5BMjE0MzgxNjYzOV5BMl5BanBnXkFtZTgwMzk3NDUyNTM@._V1_SX300.jpg', 'The adventures of the cousin of Superman in her own superhero career.');
 
 INSERT INTO shows (title, year, image_url, body) VALUES ('the walking dead', '2010', 'https://m.media-amazon.com/images/M/MV5BMTcwMDAzMDk3OF5BMl5BanBnXkFtZTgwMjY0MzcyNjM@._V1_SX300.jpg', 'Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins, and must lead a group of survivors to stay alive.');
 
-INSERT INTO shows (title, year, image_url, body) VALUES ('wynonna earp', '2016', 'https://m.media-amazon.com/images/M/MV5BMTc1ODI5OTIyOV5BMl5BanBnXkFtZTgwNDUzNDk2NTM@._V1_SX300.jpg', "Based on the IDW Comic, Wynonna Earp follows Wyatt Earp's great-great-granddaughter as she battles demons and other creatures with her unique abilities and a posse of dysfunctional allies.");
+INSERT INTO shows (title, year, image_url, body) VALUES ('wynonna earp', '2016', 'https://m.media-amazon.com/images/M/MV5BMTc1ODI5OTIyOV5BMl5BanBnXkFtZTgwNDUzNDk2NTM@._V1_SX300.jpg', 'Based on the IDW Comic, Wynonna Earp follows the great-great-granddaughter of legendary lawman, Wyatt Earp, as she battles demons and other creatures with her unique abilities and a posse of dysfunctional allies.');
 
