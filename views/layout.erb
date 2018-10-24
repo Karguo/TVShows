@@ -10,6 +10,7 @@
 
 <h1>
   <span class="main-heading">Comic book TV shows</span>
+
 </h1>
 
 <h2>
@@ -30,7 +31,7 @@
   </ul>
 </nav>
 
-<main>
+<section>
   <% if logged_in? %>
     logged in as <%= current_user.email %>
     <form action="/session" method="post">
@@ -41,7 +42,7 @@
     <a href="/login">login</a>
   <% end %>
 <br>
-</main>
+</section>
 
 
 <%= yield %>

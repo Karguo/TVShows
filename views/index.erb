@@ -2,10 +2,11 @@
 
 <% @shows.each do |show| %>
 
+  <%# <p> %>
   <a href="/shows/<%= show['id'] %>">
-  <%= show.title %>
-  </a>
   <img src="<%= show.image_url %>" alt="">
+  </a>
+  <%# <p> %>
 
 <% end %>
 
