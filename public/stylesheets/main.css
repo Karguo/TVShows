@@ -1,0 +1,65 @@
+* {
+  font-family: 'Bangers', cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/yellow_comic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-heading {
+  text-align: center;
+  color: red;
+  font-size: 100px;
+  margin: 0 auto;
+  letter-spacing: 8px;
+  text-shadow: 7px 7px 1px rgba(0, 145, 255);
+}
+
+.sec-heading {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.header-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: hidden;
+  background-color:rgba(0, 145, 255, 0.8);
+}
+
+.header-nav a {
+  text-align: center;
+  text-decoration: none;
+  border-right: 1px solid blue;
+  padding: 20px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.header-nav li:last-child a {
+  border-right: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+h3 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 20px;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 1px rgba(0, 145, 255);
+}
+
+
