@@ -1,13 +1,15 @@
+<div class="suggestions">
 
+<h3> Suggestions</h3>
 
-<h3> Post your suggestions on what other shows you would like to see on this website: </h3>
+<p>Tell us what other shows would you like to see here?</p>
 
+<div class="suggestion-table">
+<br>
 <form action="/suggestions" method="post">
-
-  <label for="">Suggestion: </label>
-  <textarea name="body" cols="20" rows="5"></textarea>
+  <textarea name="body" cols="30" rows="10"></textarea>
+  <br>
   <button>Post!</button>
-
 </form>
 
 <% @suggestions.each do |suggestion| %>
@@ -20,3 +22,6 @@
   </form>
 
 <% end %>
+</div>
+
+</div>
