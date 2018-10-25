@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("images/yellow_comic.jpg");
+  background-image: url("images/blue_comic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14,7 +14,7 @@ h1 {
   font-size: 100px;
   margin: 0 auto;
   letter-spacing: 8px;
-  text-shadow: 7px 7px 1px rgba(0, 145, 255);
+  text-shadow: 7px 7px 1px rgb(255, 255, 0);
 }
 
 .login a {
@@ -26,11 +26,12 @@ h1 {
 }
 
 .login a:hover {
-  text-shadow: 2px 2px 1px rgba(0, 145, 255);
+  text-shadow: 2px 2px 1px rgb(255, 255, 0);
 }
 
 .login p {
   font-size: 18px;
+  color: rgb(255, 255, 0);
 }
 
 .login button {
@@ -38,12 +39,12 @@ h1 {
   letter-spacing: 1px;
   font-size: 15px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgb(255, 255, 0);
   border: 1px solid black;
 }
 
 .login button:hover {
-  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 50px rgba(255, 255, 0, 1);
 }
 
 h2 {
@@ -74,13 +75,13 @@ h2 {
   display: inline-flex;
   padding: 10px;
   letter-spacing: 1px;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border-radius: 10px;
 }
 
 .nav-group li:hover {
   background-color: red;
-  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 50px rgba(255, 255, 0, 1);
 }
 
 .nav-group a {
@@ -90,7 +91,7 @@ h2 {
 }
 
 .nav-group a:hover {
-  color: rgba(0, 145, 255);
+  color: rgba(255, 255, 0);
 }
 
 .btn-group button {
@@ -98,14 +99,14 @@ h2 {
   letter-spacing: 1px;
   font-size: 30px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border-radius: 10px;
 }
 
 .btn-group button:hover {
   background-color: red;
   color: rgba(0, 145, 255);
-  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 50px rgba(255, 255, 0, 1);
 }
 
 .shows-layout {
@@ -124,7 +125,7 @@ h2 {
 }
 
 .shows-layout img:hover {
-  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 50px rgba(255, 255, 0, 1);
 }
 
 h3 {
@@ -134,7 +135,7 @@ h3 {
   margin: 0 auto;
   padding: 20px;
   letter-spacing: 5px;
-  text-shadow: 5px 5px 1px rgba(0, 145, 255);
+  text-shadow: 5px 5px 1px rgba(255, 255, 0);
 }
 
 .single-show img {
@@ -145,6 +146,8 @@ h3 {
 .single-show p {
   font-size: 40px;
   letter-spacing: 0.5px;
+  color: darkgrey;
+  text-shadow: -1px 0 black, 0 0.5px black, 1px 0 black, 0 -1px black;
 }
 
 .single-show button {
@@ -152,12 +155,12 @@ h3 {
   letter-spacing: 1px;
   font-size: 25px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border: 1px solid black;
 }
 
 .single-show button:hover {
-  box-shadow: 0px 0px 10px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 0, 1);
 }
 
 .single-show form {
@@ -168,7 +171,7 @@ h3 {
   text-align: center;
   border: 1px solid black;
   border-bottom: 0;
-  background-color: rgba(0, 145, 255, 0.5);
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .comments p {
@@ -180,20 +183,22 @@ h3 {
   letter-spacing: 1px;
   font-size: 18px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border: 1px solid black;
 }
 
 .suggestions p {
   font-size: 30px;
   text-align: center;
+  color: darkgrey;
+  text-shadow: -1px 0 black, 0 0.5px black, 1px 0 black, 0 -1px black;
 }
 
 .suggestion-table {
   text-align: center;
   border: 1px solid black;
   border-bottom: 0;
-  background-color: rgba(0, 145, 255, 0.5);
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .suggestion-table button {
@@ -201,12 +206,14 @@ h3 {
   letter-spacing: 1px;
   font-size: 18px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border: 1px solid black;
 }
 
 .login-page p {
   font-size: 40px;
+  color: darkgrey;
+  text-shadow: -1px 0 black, 0 0.5px black, 1px 0 black, 0 -1px black;
 }
 
 .login-page button {
@@ -214,12 +221,12 @@ h3 {
   letter-spacing: 1px;
   font-size: 18px;
   color: red;
-  background-color: rgba(0, 145, 255);
+  background-color: rgba(255, 255, 0);
   border: 1px solid black;
 }
 
 .login-page button:hover {
-  box-shadow: 0px 0px 10px rgba(0, 145, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 0, 1);
 }
 
 .login-page a {
@@ -231,12 +238,14 @@ h3 {
 }
 
 .login-page a:hover {
-  text-shadow: 2px 2px 1px rgba(0, 145, 255);
+  text-shadow: 2px 2px 1px rgba(255, 255, 0);
 }
 
 .error-page p {
   font-size: 30px;
   text-align: center;
+  color: darkgrey;
+  text-shadow: -1px 0 black, 0 0.5px black, 1px 0 black, 0 -1px black;
 }
 
 .error-page a {
@@ -246,5 +255,5 @@ h3 {
 }
 
 .error-page a:hover {
-  text-shadow: 2px 2px 1px rgba(0, 145, 255);
+  text-shadow: 2px 2px 1px rgba(255, 255, 0);
 }

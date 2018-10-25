@@ -1,6 +1,6 @@
 require 'pry'     
 require 'sinatra'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 require 'pg'
 
 require_relative 'db_config'
@@ -63,7 +63,7 @@ end
 
 delete '/session' do
   session[:user_id] = nil
-  redirect to('/login')
+  redirect to('/')
 end
 
 get '/suggestions' do
@@ -80,7 +80,7 @@ get '/error' do
 end
 
 post '/shows' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   redirect to('/error') unless current_user.admin?
   show = Show.new
   show.title = params[:title]
@@ -92,7 +92,7 @@ post '/shows' do
 end
 
 delete '/shows/:id' do 
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   redirect to('/error') unless current_user.admin?
   show = Show.find(params[:id])
   show.destroy
@@ -100,7 +100,7 @@ delete '/shows/:id' do
 end
 
 post '/likes' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   like = Like.new
   like.show_id = params[:show_id]
   like.user_id = params[:user_id]
@@ -109,16 +109,16 @@ post '/likes' do
 end
 
 post '/suggestions' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   suggestion = Suggestion.new
   suggestion.user_id = params[:user_id]
   suggestion.body = params[:body]
   suggestion.save
-  redirect to('/')
+  redirect to('/suggestions')
 end
 
 delete '/suggestions/:id' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   redirect to('/error') unless current_user.admin?
   suggestion = Suggestion.find(params[:id])
   suggestion.destroy
@@ -136,7 +136,7 @@ post '/comments' do
 end
 
 delete '/comments/:id' do
-  redirect to('/login') unless logged_in?
+  redirect to('/error') unless logged_in?
   redirect to('/error') unless current_user.admin?
   comment = Comment.find(params[:id])
   comment.destroy

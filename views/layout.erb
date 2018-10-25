@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TV shows based on Comic Books</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <link id="switchtheme" rel='stylesheet' href='/stylesheets/main.css'>
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 </head>
 <body>
@@ -33,18 +33,30 @@
 </h2>
 
 <nav>
-  <ul class="header-nav">
+  
+  <div class="header-nav">
+    
+    <div class="nav-group">
     <li><a href="/">HOME</a></li>
     <li><a href="/suggestions">SUGGESTIONS</a></li>
     <% if logged_in? && current_user.admin? %>
     <li><a href="/new">ADD SHOW</a></li>
     <% end %>
-    <li><a href="/">THEME SWITCHER</a></li>
-  </ul>
+    </div>
+
+    <div class="btn-group">
+    <button id= "switchTheme" onclick="switchTheme('/stylesheets/blue.css')">blue</button>
+    <button id= "switchTheme" onclick="switchTheme('stylesheets/bw.css')">B&W</button>
+    <button id= "switchTheme" onclick="switchTheme('stylesheets/main.css')">yellow</button>
+    </div>
+  
+  </div>
+
 </nav>
 
-
 <%= yield %>
+
+<script type="text/javascript" src="/javascripts/application.js"></script>
 
 </body>
 </html>
