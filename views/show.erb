@@ -1,12 +1,18 @@
+<div class="single-show">
+
+<h3><%= @show['title'] %></h3>
 
 <img src="<%= @show['image_url'] %>" alt="">
+<br>
 
-<h3>Show title: <%= @show['title'] %></h3>
-On air since: <%= @show['year'] %>
-<br>
-Show description: <%= @show['body'] %>
-<br>
-<br>
+<form action="/likes" method="post">
+  <input type="hidden" name="show_id" value="<%= @show['id'] %>">
+  <button>LIKE!</button>
+  (<%= @show.likes.count %>)
+</form>
+
+<p>On air since: <%= @show['year'] %></p>
+<p>Show description: <%= @show['body'] %></p>
 
 <% if logged_in? && current_user.admin? %>
 <form action="/shows/<%= @show['id'] %>" method="post">
@@ -14,22 +20,19 @@ Show description: <%= @show['body'] %>
   <button>Be Gone!</button>
 </form>
 <% end %>
+<br>
 
-<form action="/likes" method="post">
-
-  <input type="hidden" name="show_id" value="<%= @show['id'] %>">
-  <button>LIKE!</button>
-  (<%= @show.likes.count %>)
-
-</form>
+</div>
+<br>
+<div class="comments">
 
 <form action="/comments" method="post">
-
-  <label for="">Comments: </label>
+  <p><label for="">Comments</label></p>
+  <br>
   <input type="hidden" name="show_id" value="<%= @show['id'] %>">
-  <textarea name="body" cols="20" rows="5"></textarea>
+  <textarea name="body" cols="30" rows="10"></textarea>
+  <br>
   <button>Post!</button>
-
 </form>
 
 <% @comments.each do |comment| %>
@@ -40,6 +43,7 @@ Show description: <%= @show['body'] %>
   <input type="hidden" name="_method" value="delete">
   <button>Take it away!</button>
   </form>
-
+<br>
 <% end %>
 
+</div>

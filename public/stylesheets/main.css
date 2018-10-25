@@ -9,8 +9,12 @@ body {
   background-size: cover;
 }
 
-.main-heading {
-  text-align: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
   color: red;
   font-size: 100px;
   margin: 0 auto;
@@ -18,7 +22,36 @@ body {
   text-shadow: 7px 7px 1px rgba(0, 145, 255);
 }
 
-.sec-heading {
+.login a {
+  font-size: 30px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: red;
+  text-shadow: -1px 0 black, 0 0.5px black, 1px 0 black, 0 -1px black;
+}
+
+.login a:hover {
+  text-shadow: 2px 2px 1px rgba(0, 145, 255);
+}
+
+.login p {
+  font-size: 18px;
+}
+
+.login button {
+  padding: 8px 8px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: red;
+  background-color: rgba(0, 145, 255);
+  border: 1px solid black;
+}
+
+.login button:hover {
+  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+}
+
+h2 {
   text-align: center;
   color: red;
   font-size: 50px;
@@ -29,14 +62,13 @@ body {
 .header-nav {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
   overflow: hidden;
   background-color:rgba(0, 145, 255, 0.8);
 }
 
 .header-nav a {
-  text-align: center;
   text-decoration: none;
   border-right: 1px solid blue;
   padding: 20px;
@@ -52,16 +84,6 @@ li a:hover {
   background-color: red;
 }
 
-h3 {
-  text-align: center;
-  color: red;
-  font-size: 40px;
-  margin: 0 auto;
-  padding: 20px;
-  letter-spacing: 5px;
-  text-shadow: 5px 5px 1px rgba(0, 145, 255);
-}
-
 .shows-layout {
   display: flex;
   height: 100%;
@@ -75,4 +97,65 @@ h3 {
   height:100%;
   width: 320px;
   display: block;
+}
+
+.shows-layout img:hover {
+  box-shadow: 0px 0px 50px rgba(0, 145, 255, 1);
+}
+
+h3 {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  margin: 0 auto;
+  padding: 20px;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 1px rgba(0, 145, 255);
+}
+
+.single-show img {
+  display: block;
+  margin: auto;
+}
+
+.single-show p {
+  font-size: 40px;
+  letter-spacing: 0.5px;
+}
+
+.single-show button {
+  padding: 10px 10px;
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: red;
+  background-color: rgba(0, 145, 255);
+  border: 1px solid black;
+}
+
+.single-show button:hover {
+  box-shadow: 0px 0px 10px rgba(0, 145, 255, 1);
+}
+
+.single-show form {
+  text-align: center;
+}
+
+.comments {
+  text-align: center;
+  border: 1px solid black;
+  border-bottom: 0;
+  background-color: rgba(0, 145, 255, 0.5);
+}
+
+.comments p {
+  font-size: 30px;
+}
+
+.comments button {
+  padding: 8px 8px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: red;
+  background-color: rgba(0, 145, 255);
+  border: 1px solid black;
 }

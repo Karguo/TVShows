@@ -8,41 +8,40 @@
 </head>
 <body>
 
+<div class="header">
 <h1>
-  <span class="main-heading">Comic book TV shows</span>
-
+<span class="main-heading">Comic book TV shows
 </h1>
-
-<h2>
-  <span class="sec-heading">TV shows currently on air based on comic books</span>
-</h2>
-
-<nav>
-  <ul class="header-nav">
-    <li><a href="/">HOME</a></li>
-    <li><a href="/login">LOGIN</a></li>
-    <li><a href="/signup">SIGNUP</a></li>
-    <li><a href="/suggestions">SUGGESTIONS</a></li>
-    <% if logged_in? && current_user.admin? %>
-    <li><a href="/new">ADD SHOW</a></li>
-    <% end %>
-    <li><a href="/">ARCHIVE</a></li>
-    <li><a href="/">THEME SWITCHER</a></li>
-  </ul>
-</nav>
-
-<section>
+  <section class="login">
   <% if logged_in? %>
-    logged in as <%= current_user.email %>
+    <p>logged in as <%= current_user.email %></p>
     <form action="/session" method="post">
       <input type="hidden" name="_method" value="delete">
     <button>logout</button>
     </form>
   <% else %>
     <a href="/login">login</a>
+    <br>
+    <a href='/signup'>signup</a>
   <% end %>
-<br>
-</section>
+  </section>
+</span>
+</div>
+
+<h2>
+  TV shows currently on air based on comic books
+</h2>
+
+<nav>
+  <ul class="header-nav">
+    <li><a href="/">HOME</a></li>
+    <li><a href="/suggestions">SUGGESTIONS</a></li>
+    <% if logged_in? && current_user.admin? %>
+    <li><a href="/new">ADD SHOW</a></li>
+    <% end %>
+    <li><a href="/">THEME SWITCHER</a></li>
+  </ul>
+</nav>
 
 
 <%= yield %>
