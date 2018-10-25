@@ -248,3 +248,7 @@ h3 {
 .error-page a:hover {
   text-shadow: 2px 2px 1px rgba(0, 145, 255);
 }
+
+textarea {
+  font-size: 20px;
+}
