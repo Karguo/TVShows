@@ -6,4 +6,4 @@ require_relative 'models/like'
 require_relative 'models/user'
 require_relative 'models/suggestion'
 
-# binding.pry
+binding.pry
