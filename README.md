@@ -35,6 +35,14 @@ new.erb will only be accessible for admin users to add new shows. It will be a f
 login.erb will a form for all users to signup or login (if already signed up) with their email and create a password. 
 a suggestion page where user can add their suggestions on what other shows they want to see on the app. Only admin will be able to remove suggestions.
 </li>
+
+Links to my wireframe/framework:
+[Imgur](https://i.imgur.com/iwUWMpK.jpg)
+[Imgur](https://i.imgur.com/Af91piN.jpg)
+[Imgur](https://i.imgur.com/5P3yXoI.jpg)
+[Imgur](https://i.imgur.com/r0RYvIO.jpg)
+[Imgur](https://i.imgur.com/XVB0mOc.jpg)
+[Imgur](https://i.imgur.com/SSY7I39.jpg)
 ____________________________
 
 Thoughts after doing the project:
