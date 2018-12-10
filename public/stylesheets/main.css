@@ -260,3 +260,10 @@ h3 {
 textarea {
   font-size: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

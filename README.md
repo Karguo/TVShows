@@ -52,3 +52,8 @@ I think I managed to achieve most of what I had set out to do which I am very ha
 There are 3 types of users: - 1) admin with full access, including ability to add and delete shows. Add and delete comments and suggestions. 2) user with slightly more limited access, ie, view the individual shows, add comments, add suggestions. 3) guest with limited access, ie, view the individual shows, view the comments and suggestions but unable to contribute to them. 
 
 Theme switcher with 3 different css files completed using Javascript and Local Storage. The Javascript was again challenging for me but it is working at least. 
+
+Things I would do:
+More graphics on my pages, some are quite bare.
+Instead of deleting any show, put them into an archive instead.
+Allow users to delete their own comments. 
